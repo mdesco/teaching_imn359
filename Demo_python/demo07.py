@@ -13,7 +13,7 @@ f = np.arange(-500, 500) # 1000 Hz
 y = np.cos(2 * np.pi * f0 * t)
 
 plt.clf()
-plt.plot(t, y, linewidth=2)
+plt.plot(t, y, 'b-o', linewidth=2)
 plt.title(f"Signal avec une frequence de {f0} cycles/seconde")
 plt.xlabel("Temps (s)")
 plt.show()
@@ -88,14 +88,14 @@ f4 = np.arange(-fs4/2, fs4/2+1)
 f5 = np.arange(-fs5/2, fs5/2+1)
 
 fig, axs = plt.subplots(4,1)
-axs[0].plot(f1, np.real(fftshift(fft(s1))), 'o', linewidth=2)
-axs[1].plot(f2, np.real(fftshift(fft(s2))), 'o', linewidth=2)
-axs[2].plot(f3, np.real(fftshift(fft(s3))), 'o', linewidth=2)
-axs[3].plot(f4, np.real(fftshift(fft(s4))), 'o', linewidth=2)
+axs[0].plot(f1, np.abs(fftshift(fft(s1))), 'o', linewidth=2)
+axs[1].plot(f2, np.abs(fftshift(fft(s2))), 'o', linewidth=2)
+axs[2].plot(f3, np.abs(fftshift(fft(s3))), 'o', linewidth=2)
+axs[3].plot(f4, np.abs(fftshift(fft(s4))), 'o', linewidth=2)
 plt.show()
 
 plt.clf()
-plt.plot(f5, np.real(fftshift(fft(s5))), 'o', linewidth=2)
+plt.plot(f5, np.abs(fftshift(fft(s5))), 'o', linewidth=2)
 plt.show()
 plt.clf()
 
