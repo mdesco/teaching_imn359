@@ -14,3 +14,14 @@ plt.show()
 
 plt.imshow(np.log(np.abs(np.real(IRM))))
 plt.show()
+
+lena = np.array(loadmat('fonctions/data/lena.mat')['lena'], dtype=float)
+mand = np.array(loadmat('fonctions/data/mandrill.mat')['mandrill'], dtype=float)
+phan = np.array(loadmat('fonctions/data/phantom.mat')['phantom'], dtype=float)
+regu = np.array(loadmat('fonctions/data/regular.mat')['regular'], dtype=float)
+
+np.save('fonctions/data/phantom.npy', phan)
+np.save('fonctions/data/regular.npy', regu)
+np.save('fonctions/data/lena.npy', lena)
+np.save('fonctions/data/mandrill.npy', mand)
+

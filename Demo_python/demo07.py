@@ -8,12 +8,13 @@ from fonctions.delta import delta
 
 # Exemple d'échantillonnage
 f0 = 4
-t = np.linspace(0, 1, 1000) # 1000 échantillons/seconde
-f = np.arange(-500, 500) # 1000 Hz
+N=1000
+t = np.linspace(0, 1, N) # 1000 échantillons/seconde
+f = np.arange(-N/2, N/2) # 1000 Hz
 y = np.cos(2 * np.pi * f0 * t)
 
 plt.clf()
-plt.plot(t, y, 'b-o', linewidth=2)
+plt.plot(t, y, 'bo', linewidth=2)
 plt.title(f"Signal avec une frequence de {f0} cycles/seconde")
 plt.xlabel("Temps (s)")
 plt.show()
